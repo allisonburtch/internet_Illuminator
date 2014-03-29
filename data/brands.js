@@ -1137,7 +1137,7 @@ var brands = {
 // });
 
 
-walk(replacementFunction, element) {
+function walk(replacementFunction, element) {
     var nodes = element.childNodes;
     for (var n=0; n<nodes.length; n++) {
         if (nodes[n].nodeType == Node.TEXT_NODE) {
@@ -1150,18 +1150,18 @@ walk(replacementFunction, element) {
 }
 
 function replace(textContent) {
-  for (var i = 0; i < brands.length; i++){
-    var brand = brands[i];
-    textContent = textContent.replace(brand.brand, brand.brand + " (" + brand.parent + ")");
+  for (child in brands){
+    var parent = brands[child];
+    textContent = textContent.replace(child, child + " (" + parent + ")");
   }
-  return textContent
+  return textContent;
 }
 
 
-exports = {}
-exports.walk = walk
-exports.replace = replace
+exports = {};
+exports.walk = walk;
+exports.replace = replace;
 exports.main = function() {
-  walk(replace, document.body)
-}
+  walk(replace, document.body);
+};
 
