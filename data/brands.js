@@ -1137,9 +1137,7 @@ var brands = {
 // });
 
 
-exports = {}
-
-function walk(replacementFunction, element) {
+walk(replacementFunction, element) {
     var nodes = element.childNodes;
     for (var n=0; n<nodes.length; n++) {
         if (nodes[n].nodeType == Node.TEXT_NODE) {
@@ -1160,6 +1158,10 @@ function replace(textContent) {
 }
 
 
+exports = {}
+exports.walk = walk
+exports.replace = replace
 exports.main = function() {
   walk(replace, document.body)
 }
+
