@@ -1137,6 +1137,7 @@ var brands = {
 // });
 
 
+exports = {}
 
 function walk(replacementFunction, element) {
     var nodes = element.childNodes;
@@ -1158,4 +1159,7 @@ function replace(textContent) {
   return textContent
 }
 
-// walk(replace, document.body)
+
+exports.main = function() {
+  walk(replace, document.body)
+}
