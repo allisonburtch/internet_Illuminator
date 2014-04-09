@@ -812,7 +812,7 @@ var brands = {
 "Freeport-McMoRan Copper & Gold" : "ALEC",
 "Fremont Company" : "ALEC",
 "Fremont Pacific Compensation Insurance Group " : "ALEC",
-"Frito-Lay" : "ALEC",
+"Frito-Lay Inc." : "ALEC",
 "Frontier" : "ALEC",
 "Fruit of the Loom " : "ALEC",
 "Gates Corp." : "ALEC",
@@ -1137,6 +1137,7 @@ var brands = {
 // });
 
 
+
 function walk(replacementFunction, element) {
     var nodes = element.childNodes;
     for (var n=0; n<nodes.length; n++) {
@@ -1150,22 +1151,11 @@ function walk(replacementFunction, element) {
 }
 
 function replace(textContent) {
-  for (var child in brands){
-    var parent = brands[child];
-    textContent = textContent.replace(child, child + " (" + parent + ")");
+  for (var i = 0; i < brands.length; i++){
+    var brand = brands[i];
+    textContent = textContent.replace(brand.brand, brand.brand + " (" + brand.parent + ")");
   }
-  return textContent;
-
-    console.log(child);
-    console.log(parent);
+  return textContent
 }
 
-
-
-exports = {};
-exports.walk = walk;
-exports.replace = replace;
-exports.main = function() {
-  walk(replace, document.body);
-};
-
+// walk(replace, document.body)
