@@ -2,8 +2,8 @@
   "name": "powercontrol",
   "title": "powercontrol",
   "id": "jid1-1SwodKHfFYYKMQ",
-  "description": "a basic add-on",
-  "author": "",
-  "license": "MPL 2.0",
+  "description": "an add-on that clarifies corporate data and political sponsorship in html text",
+  "author": "allison burtch, allisonburtch.net",
+  "license": "MIT GPL",
   "version": "0.1"
 }
