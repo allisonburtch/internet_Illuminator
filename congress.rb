@@ -20,9 +20,9 @@ def getthegoods
 	dudes.each do |dude|
 		newones = dude.committees
 		#i used begin/end so i could sort the data easier in sublime
-		myfile.puts "Begin: #{dude.firstname}" + " " "#{dude.lastname}:"
+		myfile.puts "Begin: #{dude.firstname}" + " #{dude.lastname}:"
 		newones.each do |names|
-			myfile.puts "#{names.name}, "
+			myfile.puts "#{names.name},"
 		end
 		myfile.puts "end"
 
@@ -30,9 +30,9 @@ def getthegoods
 
 	ladies.each do |lady|
 		newones = lady.committees
-		myfile.puts "Begin #{lady.firstname}" + " " "#{lady.lastname}: "
+		myfile.puts "Begin #{lady.firstname}" + " #{lady.lastname}:"
 		newones.each do |names|
-			myfile.puts "#{names.name}, "
+			myfile.puts "#{names.name},"
 			myfile.puts "end"
 		end
 	end
