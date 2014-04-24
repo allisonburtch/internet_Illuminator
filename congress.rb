@@ -1,4 +1,5 @@
-# using ruby wrapper for data from sunlight foundation to print out lists of legislator names and the committees on which they sit
+# using ruby wrapper for data from sunlight foundation 
+# to print out lists of legislator names and the committees on which they sit
 # http://services.sunlightlabs.com/docs/Sunlight_Congress_API/
 
 require 'rubygems'
