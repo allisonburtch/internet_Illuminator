@@ -32,13 +32,15 @@ list.each do |company|
 end
 end
 
-myfile.puts "list of board members"
-myfile.puts boardmembers.to_json
-myfile.puts "list of nonboardmembers"
-myfile.puts nonboardmembers.to_json
 
+boardmembers.each do |person|
+	myfile.puts "\"#{person[1]["name"]}\"" + ":" + "\"(board member of #{person[1]["companies"].join(", ")}\"" + ","
+end
 
-pry
+nonboardmembers.each do |person|
+	myfile.puts "\"#{person[1]["name"]}\"" + ":" + "\"affiliated with #{person[1]["companies"].join(", ")}\"" + ","
+end
+#pry
 
 # leadership = list.entities.first.leadership
 

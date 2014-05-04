@@ -41,7 +41,3 @@ end
 
 getthegoods
 
-#embarrasment algorithm?
-#shittiest thing about a politician?
-#
-
