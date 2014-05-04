@@ -18,10 +18,10 @@ def getthegoods
 	ladies = Sunlight::Legislator.all_where(:gender => "F")
 
 	dudes.each do |dude|
-		newones = dude.committees
+		committees = dude.committees
 		#i used begin/end so i could sort the data easier in sublime
 		myfile.puts "Begin: #{dude.firstname}" + " #{dude.lastname}:"
-		newones.each do |names|
+		committees.each do |names|
 			myfile.puts "#{names.name},"
 		end
 		myfile.puts "end"
@@ -29,9 +29,9 @@ def getthegoods
 	end
 
 	ladies.each do |lady|
-		newones = lady.committees
+		committees = lady.committees
 		myfile.puts "Begin #{lady.firstname}" + " #{lady.lastname}:"
-		newones.each do |names|
+		committees.each do |names|
 			myfile.puts "#{names.name},"
 			myfile.puts "end"
 		end
@@ -40,4 +40,8 @@ def getthegoods
 end
 
 getthegoods
+
+#embarrasment algorithm?
+#shittiest thing about a politician?
+#
 
