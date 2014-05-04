@@ -3,8 +3,10 @@ require 'pry'
 
 client = LittlesisClient.new('ff62bfcd96f832d0d60cb3b889fa3b0ea0577623', 'api.littlesis.org') 
 
-fortune1000 = client.list.get_with_entities(110)
-list = fortune1000.entities
+fortune1000_1 = client.list.get_with_entities(110, { 'num' => 500 })
+fortune1000_2 = client.list.get_with_entities(110, { 'num' => 500, 'page' => 2 })
+
+list = fortune1000_1.entities + fortune1000_2.entities
 
 people = {}
 filename = "entities.txt"
