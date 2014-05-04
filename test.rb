@@ -8,7 +8,8 @@ fortune1000_2 = client.list.get_with_entities(110, { 'num' => 500, 'page' => 2 }
 
 list = fortune1000_1.entities + fortune1000_2.entities
 
-people = {}
+boardmembers = {}
+nonboardmembers = {}
 filename = "entities.txt"
 myfile = File.open(filename, "w")
 
@@ -16,16 +17,26 @@ list.each do |company|
 	leaders = client.entity.get_leadership_degree2(company.id)
 	leaders.each do |leader|
 		if leader.details[:is_board] == "1"
-			if people.has_key?(leader.id)
-				people[leader.id]["companies"] << company.name
+			if boardmembers.has_key?(leader.id)
+				boardmembers[leader.id]["companies"] << company.name
 			else
-				people[leader.id] = {"name" => leader.name, "companies" => [company.name]}
+				boardmembers[leader.id] = {"name" => leader.name, "companies" => [company.name]}
 			end
+		elsif leader.details[:is_board] == ""
+			if nonboardmembers.has_key?(leader.id)
+				nonboardmembers[leader.id]["companies"] << company.name
+			else
+				nonboardmembers[leader.id] = {"name" => leader.name, "companies" => [company.name]}
 		end
 	end
 end
+end
 
-myfile.puts people.to_json
+myfile.puts "list of board members"
+myfile.puts boardmembers.to_json
+myfile.puts "list of nonboardmembers"
+myfile.puts nonboardmembers.to_json
+
 
 pry
 
@@ -56,9 +67,6 @@ pry
 # end
 
 # people.to_json
-
-
-
 
 
 # entity.first.details[:Orgs]
