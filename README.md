@@ -3,6 +3,7 @@ This add-on illuminates the corporate and political power structures of the 1%. 
 It does it by iterating through all of the html text in your browser and whenever it finds a person or corporation from the data, it illuminates that relationship a little bit. It appends that person, brand or corporation with who they are owned by, sponsored by, or acquired by. 
 
 For example, this is an example of what you would see appended to someone's name if they're on a board of a Fortune 1000 company:
+
 ![](https://pbs.twimg.com/media/Bm2RSfWCcAAk5Y7.png)
 
 Data was compiled mainly from the <a href = "http://littlesis.org/home/dashboard">Little Sis API</a>, lists of lists on Wikipedia, and other media sources. 
