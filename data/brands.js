@@ -28,9 +28,3 @@ function textNodesUnder(el){
 }
 
 replaceWord();
-
-// document.body.innerHTML = document.body.innerHTML.replace(regexp, function(match) {
-//     		console.log(match);
-//     		return match + " (" + brands[match] + ")";
-
-// 		});
