@@ -1,9 +1,9 @@
 {
-  "name": "powercontrol",
-  "title": "powercontrol",
+  "name": "illuminator",
+  "title": "illuminator",
   "id": "jid1-1SwodKHfFYYKMQ",
   "description": "an add-on that clarifies corporate data and political sponsorship in html text",
   "author": "allison burtch, allisonburtch.net",
   "license": "MIT GPL",
-  "version": "0.1"
+  "version": "0.2"
 }
