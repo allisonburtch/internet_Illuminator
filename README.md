@@ -13,3 +13,7 @@ Data was compiled mainly from the <a href = "http://littlesis.org/home/dashboard
 However, it's very very slow right now (there's a 14000 line regex) and causes lags in the browser. Any help/thoughts on making this faster would be welcome.
 
 
+#NEXT STEPS
+1. Port it to Chrome
+2. make it not crash browsers
+3. get the data programmatically
